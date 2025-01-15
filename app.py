@@ -66,10 +66,7 @@ def main():
             x="a*", y="b*", z="L*",  # x軸: a*, y軸: b*, z軸: L*
             color="pred",
             color_discrete_map=color_map,
-            marker=dict(
-                size=6,
-                opacity=0.6
-            ),
+            opacity=0.6,
             title="Lab空間における色分類結果"
         )
         st.plotly_chart(fig, use_container_width=True)
