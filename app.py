@@ -43,14 +43,14 @@ def main():
 
         # 4. 色分類ごとに色を指定した辞書
         color_map = {
-            "高白色": "#f0f0f0",
-            "白":     "#ffffff",
+            "高白色": "#f0f0ff",
+            "白":     "#eeeeee",
             "ナチュラル": "#d2b48c",  # タン色
             "黒":     "#000000",
             "グレー": "#808080",
             "赤":     "#ff0000",
             "オレンジ": "#ffa500",
-            "茶色":   "#a52a2a",
+            "茶色":   "#965042",
             "黄色":   "#ffff00",
             "緑":     "#00ff00",
             "青":     "#0000ff",
@@ -66,7 +66,10 @@ def main():
             x="a*", y="b*", z="L*",  # x軸: a*, y軸: b*, z軸: L*
             color="pred",
             color_discrete_map=color_map,
-            opacity=0.6,
+            marker=dict(
+                size=6,
+                opacity=0.6
+            ),
             title="Lab空間における色分類結果"
         )
         st.plotly_chart(fig, use_container_width=True)
